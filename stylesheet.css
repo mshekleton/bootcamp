@@ -1,0 +1,58 @@
+p {
+    font-size: 120%;
+    color: dimgray;
+  }
+  .main-input-form {
+      color: darkslategrey;
+      font-family: Impact, Charcoal, sans-serif;
+      font-size: 15px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    padding: 5px 100px 5px 50px; 
+  }
+
+.form-box {
+    float: left;
+    width: 49%;
+    border-width: thin;
+    border-color: lightslategray;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.message-box {
+    float: right;
+    padding: 5%;
+    text-align: left;
+    width: 49%;
+    height: 100px;
+    overflow:auto;
+    border-width: thin;
+    border-color: lightslategray;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+#programmer-message {
+    text-align: center;
+    
+}
+
+footer {
+      text-align: center;
+      background-color: darkblue;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      height: 50px;
+      width: 100%;
+      overflow: hidden;
+}

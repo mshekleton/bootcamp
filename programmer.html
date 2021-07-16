@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
+
+</head>
+
+<body>
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="scripts.js"></script>
+
+
+
+
+    <!-- SmartSeal web-based programmer -->
+
+    <!-- vertical menu bar
+program/update
+read or verify
+tag manager
+
+
+program/update/read/verify:
+program or update selector
+read tag. if tag is empty, program mode. else read/update mode
+username and password + connect
+Inputs:
+(import list of fields from server + defaults) if in read/update mode, these fields will be updated
+...don't for get dropdowns for selection
+import from third party (like shopify)
+Info window
+batch functionality
+Program/update button
+
+tag manager:
+We'll get to this
+
+Fields manager:
+allows you to update products and stuff for dropdowns -->
+    <!-- <iframe allowpaymentrequest allow="usb; fullscreen"></iframe> -->
+    <!-- 
+Get user login info
+Get local json Info
+Get company info
+Get shopify info if necessary
+Do a bunch of if/then to show which fields are needed
+Autofill elements of the return object with some of this stuff -->
+    <div class="form-box">
+        <form action="" method="POST" class="main-input-form">
+            <div class="main-input-form">
+                <label for="is_shopify">Shopify Connected?</label>
+                <input type="checkbox" id="is_shopify" name="is_shopify" value="Is Shopify?" checked>
+            </div>
+            <!-- <div class="main-input-form">
+            <label for="shopify_product">Shopify Product </label>
+            <input type="text" name="shopify_product" id="shopify_product">
+        </div> -->
+            <div class="main-input-form">
+                <label for="cars">Shopify Product</label>
+                <select id="shopify_product" name="shopify_product">
+                    <option value="...">Product 1</option>
+                    <option value="...">Product 2</option>
+                    <option value="...">Product 3</option>
+                    <option value="...">Product 4</option>
+                </select>
+            </div>
+            <!-- <div class="main-input-form">
+            <label for="shopify_variant">Shopify Variant </label>
+            <input type="text" name="shopify_variant" id="shopify_variant">
+        </div> -->
+            <div class="main-input-form">
+                <label for="cars">Shopify Variant</label>
+                <select id="shopify_variant" name="shopify_variant">
+                    <option value="...">Variant 1</option>
+                    <option value="...">Variant 2</option>
+                    <option value="...">Variant 3</option>
+                    <option value="...">Variant 4</option>
+                </select>
+            </div>
+            <div class="main-input-form">
+                <label for="product_name">Product Name: </label>
+                <input type="text" name="product_name" id="product_name" required>
+            </div>
+            <div class="main-input-form">
+                <label for="rfid_is_attached">Is RFID attached?</label>
+                <input type="checkbox" id="rfid_is_attached" name="rfid_is_attached" value="Is RFID Attached?">
+            </div>
+            <div class="main-input-form">
+                <label for="rfid_uid">RFID UID</label>
+                <input type="text" name="rfid_uid" id="rfid_uid">
+            </div>
+            <div class="main-input-form">
+                <label for="test_tag">Is test tag? (This does not count towards valid tags)</label>
+                <input type="checkbox" id="test_tag" name="test_tag" value="Is Test Tag?">
+            </div>
+            <div class="main-input-form">
+                <label for="tag_valid">Is tag valid?</label>
+                <input type="checkbox" id="tag_valid" name="tag_valid" value="Is Valid?" checked>
+            </div>
+            <div class="main-input-form">
+                <label for="tag_expired">Is tag expired?</label>
+                <input type="checkbox" id="tag_expired" name="tag_expired" value="Is Expired?">
+            </div>
+            <div class="main-input-form">
+                <label for="tt_type">Is TT Variant?</label>
+                <input type="checkbox" id="tt_type" name="tt_type" value="Is TT?">
+            </div>
+            <div class="main-input-form">
+                <label for="count_limit">Max allowable scans (blank for indefinite):</label>
+                <input type="text" id="count_limit" name="count_limit" value="200000">
+            </div>
+            <div class="main-input-form">
+                <label for="series">Series:</label>
+            </div>
+            <div class="main-input-form">
+                <label for="batch_id">Batch:</label>
+            </div>
+            <div class="main-input-form">
+                <label for="publish_timestamp">Tag activate date (blank defaults to now):</label>
+                <input type="datetime-local" name="publish_timestamp" id="datetime">
+            </div>
+            <div class="main-input-form">
+                <label for="tag_expiration">Tag deactivate date (blank defaults to never):</label>
+                <input type="datetime-local" name="tag_expiration" id="datetime">
+            </div>
+            <div class="main-input-form">
+                <label for="product_expiration">Product expiration date (blank defaults to never):</label>
+                <input type="datetime-local" name="product_expiration" id="datetime">
+            </div>
+            <div class="main-input-form">
+                <label for="redirect_url">Redirect URL (NON-TT):</label>
+                <input type="text" name="redirect_url" id="redirect_url">
+            </div>
+            <div class="main-input-form">
+                <label for="redirect_ttopen_url">Redirect URL (TT-Open):</label>
+                <input type="text" name="redirect_ttopen_url" id="redirect_ttopen_url">
+            </div>
+            <div class="main-input-form">
+                <label for="redirect_ttclose_url">Redirect URL (TT-Close):</label>
+                <input type="text" name="redirect_ttclose_url" id="redirect_ttclose_url">
+            </div>
+            <div class="main-input-form">
+                <label for="comments">Tag comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+            <div class="main-input-form">
+                <label for="description">Product description:</label>
+                <textarea id="description" name="description" rows="4" cols="50"></textarea>
+            </div>
+            <div class="main-input-form">
+                <label for="image_location">Image URL:</label>
+                <input type="text" name="image_location" id="image_location">
+            </div>
+            <div class="main-input-form">
+                <label for="price">Price:</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <div class="main-input-form">
+                <input type="submit" value="Assign to Tag">
+            </div>
+        </form>
+    </div>
+
+    <div class="message-box">
+        <p id="programmer-message">Status</p>
+    </div>
+    <!-- uid -->
+    <!-- shopify_product
+shopify_variant
+product_name
+rfid_uid
+rfid_is_attached
+programmer_id
+programmed_timestamp
+test_tag
+tag_valid
+tag_expired
+tt_type
+tt_status
+greatest_auth_count
+count_limit
+series
+batch_id
+published
+publish_timestamp
+coa_id
+customer_id
+tag_expiration
+product_expiration
+redirect_url
+redirect_ttopen_url
+redirect_ttclose_url
+last_scan_date
+comments
+fail_counter
+expired_fail_counter
+pass_counter_sealed
+pass_counter_unsealed
+description
+image_location
+is_registered
+price -->
+    <!-- 
+<input type="checkbox" id="carrots" name="carrots" value="carrots" checked>
+<input type="checkbox" id="carrots" name="carrots" value="carrots" checked>
+<input type="radio" id="soup" name="meal" checked>
+
+<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime">
+<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="password" id="pwd" name="pwd"> -->
+
+    <!-- <button type="submit">
+    This is a <strong>submit button</strong>
+</button>
+
+<input type="submit" value="This is a submit button">
+
+<button type="reset">
+    This is a <strong>reset button</strong>
+</button>
+
+<input type="reset" value="This is a reset button"> -->
+
+    <footer>
+        <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> Smart Seal Inc. All Rights Reserved
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

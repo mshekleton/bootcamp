@@ -1,0 +1,85 @@
+<h1>Making Embedded Near-Field Communication (NFC) Work for Your Brand</h1>
+
+<h2>What is NFC and how does it work</h2>
+<p>
+    Near-Field Communication (NFC) is a method for communicating over a short distance, typically less than an inch,
+    between two objects. One of the most familiar examples of this is touchless payment like Android or Apple Pay. In
+    this
+    article, we will be discussing communication between a smartphone or a programmer and a an NFC "tag". An NFC tag is
+    a passive
+    RF circuit that is powered by a phone's radio emissions. This means that passive tags do not contain an batteries,
+    which means their lifespan is essentially indefinite and they take of very little space. Most modern smartphones are
+    NFC
+    enabled, and don't require any third party applications needed to read the tag. Tags can hold records that prompt
+    the phone to take actions like adding a contact, connecting to a WiFi network, or launching a website in the
+    browser.
+</p>
+
+<h2>What are the benefits of NFC?</h2>
+NFC tags fill in the gaps where
+
+<h3>Ease of use</h3>
+
+<h3>Authentication</h3>
+
+<h3>Serialization</h3>
+
+<h3>Encryption</h3>
+
+<h3>Location and Data</h3>
+
+<h3>Dynamic linking</h3>
+
+<h3>Brand interaction/loyalty</h3>
+
+<h3>Post-sale Data collection and analytics</h3>
+
+<h2>Difficulties of implementation</h2>
+Programming tags:
+Insertion into manufacturing chain
+Security of programmers
+Authentication authority
+Cost of Implementation/integration with existing websites
+
+<h2>Getting consumers to interact (offer value)</h2>
+
+<h2>Solutions</h2>
+
+
+<h2>SmartSeal handles all these issues so you don’t have to.</h2>
+
+<script>
+    function geoFindMe() {
+        console.log("Script is running")
+        // const status = document.querySelector('#status');
+        // const mapLink = document.querySelector('#map-link');
+
+        // mapLink.href = '';
+        // mapLink.textContent = '';
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            //status.textContent = '';
+            // mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+            // mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+        }
+
+        function error() {
+            // status.textContent = 'Unable to retrieve your location';
+            console.log('Unable to retrieve your location')
+        }
+
+        if (!navigator.geolocation) {
+            // status.textContent = 'Geolocation is not supported by your browser';
+            console.log('Geolocation is not supported by your browser')
+        } else {
+            // status.textContent = 'Locating…';
+            navigator.geolocation.getCurrentPosition(success, error);
+            console.log('Locating...')
+        }
+
+    }
+    geoFindMe()
+</script>

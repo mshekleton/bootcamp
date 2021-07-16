@@ -1,0 +1,59 @@
+1. js: $("#funText").css("color", pink) ----> $("#funText").css("color", "pink")
+2. html: Missing header Boo The Dog Fan Page ----> <h1>Boo The Dog Fan Page!</h1> 
+3. html: img class="img-responsive" src="https://img.buzzfeed.com/buzzfeed-static/static/2015-04/21/16/enhanced/webdr05/enhanced-31550-1429646952-7.jpg" needs image tags
+4. html:
+							Dressing Up
+							Eating Grass
+							Sleeping
+							Swimming
+							Hiking
+Needs list item (<li>) tags
+
+5. html: <script type="text/javascript" src="errors.js"></script>  ----->  <script type="text/javascript" src="logic.js"></script>
+
+6. html: Button text does not match id
+				<button class="btn" id="textGreen">Orange</button>
+				<button class="btn" id="textOrange">Pink</button>
+				<button class="btn" id="textPink">Green</button>
+                ----->
+                <button class="btn" id="textGreen">Green</button>
+				<button class="btn" id="textOrange">Orange</button>
+				<button class="btn" id="textPink">Pink</button>
+
+7. js: click should be string "click"
+$("#boxGrow").on(click, function () {
+	$("#box").animate({
+		height: "+=35px",
+		width: "+=35px"
+	}, "fast");
+})
+
+$("#boxShrink").on(click, function () {
+	$("#box").animate({ height: "-=35px", width: "-=35px" }, "fast");
+})
+
+---->
+
+$("#boxGrow").on("click", function () {
+	$("#box").animate({
+		height: "+=35px",
+		width: "+=35px"
+	}, "fast");
+})
+
+$("#boxShrink").on("click", function () {
+	$("#box").animate({ height: "-=35px", width: "-=35px" }, "fast");
+})
+
+8. js: booFacts array strings need quotations closed between comma separators
+var booFacts = ["Boo is a pomeranian, Boo's best friend is another pomeranian named Buddy, Boo the Pomeranian was born on March 16, making him a Pisces, Boo's favourite food is grass, Boo has released two books"]
+ ---->
+ var booFacts = ["Boo is a pomeranian", "Boo's best friend is another pomeranian named Buddy", "Boo the Pomeranian was born on March 16, making him a Pisces", "Boo's favourite food is grass", "Boo has released two books"]
+
+9. html: <a> tag needs link, not just text.
+<a href="">https://en.wikipedia.org/wiki/Boo_(dog)</a>
+
+---> <a href="https://en.wikipedia.org/wiki/Boo_(dog)">https://en.wikipedia.org/wiki/Boo_(dog)</a>
+
+10. html:
+<p> tags in the About Boo text
